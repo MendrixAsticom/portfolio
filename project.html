@@ -48,7 +48,7 @@
 	</header>
 
 	<div class="container pt-5 pb-4 mb-1 mt-5">
-		<div class="row pb-sm-5">
+		<div class="row pb-sm-5 animate-box">
 			<div class="col-12 text-center pb-4 pb-sm-5"><h2>My Project</h2></div>
 			<div class="d-flex flex-column col-sm-4">
 				<div class="d-flex flex-column pb-3 mb-1">  
@@ -62,29 +62,30 @@
 			</div>
 			<div class="col-sm-8 pt-4 mt-1 p-sm-0 m-sm-0">
 				<span class="fw-bold">Description:</span>
-				<p> 
+				<p class="description"> 
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. 
 					Impedit illum id pariatur similique velit et iure voluptate ipsa tempore ad 
 					ea eos atque ex porro neque, doloribus, rerum earum amet.
 				</p>
 			</div>
 		</div>
-		<div class="row justify-content-center">
-			<div class="d-flex flex-column flex-md-row col-12">
+		<div class="row justify-content-center ">
+			<div class="github-container d-flex flex-column flex-md-row col-12 animate-box">
 				<span> Check this out in github: </span>
 				<span id="github-link" class="ps-2"><a href="#"><i class="fa fa-github"></i> Github link</span></a>
 			</div>
-			<div class="d-flex flex-column flex-md-row col-12 pb-3 pb-sm-5 mb-1">
+			<div class="website-container d-flex flex-column flex-md-row col-12 pb-3 pb-sm-5 mb-1 animate-box">
 				<span> Check this out live: </span>
-				<span id="github-link" class="ps-2"><a href="#"><i class="fa fa-html5"></i> Website link</span></a>
+				<span id="website-link" class="ps-2"><a href="#"><i class="fa fa-html5"></i> Website link</span></a>
 			</div>
-			<div class="pt-2 col-11 framed">
-				<div class="mb-4">
-					<img src="images/ampli.fy.png" class="image-fluid w-100" style="object-fit: contain; max-height: 500px;" alt="wewew">
+			<div class="mt-5 pt-2 col-11 framed animate-box">
+				<!-- <div class="mb-4">
+					<img src="images/ampli.fy.png" id="main-display" class="image-fluid w-100" style="object-fit: contain; max-height: 500px;" alt="wewew">
 				</div>
 				<div class="text-center">
 					<img src="images/ampli.fy.png" class="img-thumbnail" width="70px" height="70px" alt="">
-					<img src="images/ampli.fy.png" class="img-thumbnail" width="70px" height="70px" alt="">				</div>
+					<img src="images/ampli.fy.png" class="img-thumbnail" width="70px" height="70px" alt="">				
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -109,7 +110,118 @@
 	
  -->	<!-- Main -->
 	<script src="js/main.js"></script>
+ 	<script>
+		var	list = [
+			[
+				"Responsive Resume",
+				"Web Design",
+				"HTML and CSS",
+				"This website is the first activity on using css and html elements in forming a responsive website. ",
+				"https://github.com/MendrixAsticom/Resume",
+				"https://resume-olive-two.vercel.app/",
+				["images/resume_responsive.png"]	
+			],
+			[
+				"ampli.fy",
+				"Web Design",
+				"HTML, CSS, Bootstrap and JS",
+				"This website is the group project for our major project during the Kodego bootcamp. This website applies all the things that we have learned in the past few weeks.",
+				"https://github.com/MendrixAsticom/Major_project",
+				"https://major-project-iota.vercel.app/",
+				["images/ampli.fy.png"]
+			],
+			[
+				"BULHS Voting System",
+				"Web System",
+				"HTML, CSS, Bootstrap, JS, JQuery, AJAX, MySQL and PHP",
+				"This is a class project where I was tasked to design and construct the database for the Online Voting System of BU-LHS. I am also the head of the backend team and the head of candidate management feature.",
+				"none_",//private github
+				"https://vote.bicol-u.edu.ph",
+				["images/voting_system.png","images/voting_system_ex1.png","images/voting_system_ex2.png","images/voting_system_db.png"]
+			],
+			[
+				"BU Inventory System",
+				"Web System",
+				"HTML, CSS, Bootstrap, JS, JQuery, AJAX, MySQL and PHP",
+				"This is an OJT task at Bicol University where we created a web based inventory system for the supplies office. I was tasked to designed and created the database of this project.",
+				"https://github.com/Mendrixxx/InventorySystem",
+				"none_",//no website locally implemented
+				["images/inventory_pt1.png","images/inventory_pt2.png","images/inventory_db.png"]
+			],
+			[
+				"Tic-Tac-Toe AI",
+				"Artificial Intelligence",
+				"C++",
+				"This is and independent project where I applied my knowledge on algorithms and data structures. I used minmax algorithm with no alpha beta pruning in making this ai.",
+				"https://github.com/Mendrixxx/tictactoe",
+				"none_", //no website
+				["images/tictactoe_pt1.png","images/tictactoe_pt2.png"]
+			],
+			[
+				"Prescription Recognition",
+				"Machine Learning",
+				"Python, OpenCV, Keras, Flask and Java(android)",
+				"This is our thesis project where we trained a machine learning model with Convolutional Neural Networks(CRNN) and deployed it in a web application using java and flask. In our group I was tasked to create the machine learning model and create the backend for the website.",
+				"https://github.com/Research-Grp/Thesis",
+				"none_",//no website
+				["images/pharmatech_edited.jpg","images/amlodipine.jpg","images/cefuroxime.jpg"]
+			],
+			[
+				"Asticom Blog",
+				"Website Design",
+				"HTML, CSS, Bootstrap and JS",
+				"This is a mini group project during the bootcamp where we made a responsive replica of the elisha website.",
+				"https://github.com/MendrixAsticom/FirstProject",
+				"https://first-project-pied.vercel.app/about.html",
+				["images/asticom_blog.png","images/asticom_blog_pt2.png"]
+			],
+			[
+				"JS Calculator",
+				"Website System",
+				"HTML, CSS, Bootstrap and JS",
+				"This is an activity from the bootcamp where we practiced our knowledge in JavaScript and problem solving.",
+				"https://github.com/MendrixAsticom/Calculator",
+				"https://calculator-five-henna.vercel.app/",
+				["images/calculator.png"]
+			]
+		];
+		$(document).ready(function(){
+			var order = sessionStorage.getItem("info");
+			var data = list[parseInt(order)];
+			$(".project-title").text(data[0]);
+			$("project-type").text(data[1]);
+			$("#pl").text(data[2]);
+			$(".description").text(data[3]);
+			if(data[4]!="none_"){
+				$("#github-link").children("a").attr("href",data[4]);
+			}else{
+				$(".github-container").remove();
+			}
+			if(data[5]!="none_"){
+				$("#website-link").children("a").attr("href",data[5]);
+			}else{
+				$(".website-container").remove();
+			}
+			$("#website-link").children("a").attr("href",data[5]);
+			var string = "<div class='mb-4'>"+
+							"<img src='"+data[6][0]+"' class='image-fluid w-100' id='main-display' style='object-fit: contain; max-height: 500px' alt='wewew'>"+
+						"</div>";
+			
+			if (data[6].length!=1){
+				string += "<div class='text-center'>";
+				for(var index of data[6]){
+					string += "<img src='"+ index +"' class='img-thumbnail' width='70px' height='70px' alt=''>";
+				}
+				string += "</div>";
+			}
+			$(".framed").append(string);
 
+			$(".img-thumbnail").click(function(){
+				$("#main-display").attr("src", $(this).attr("src"));
+			});
+		});
+			
+	</script>
 	</body>
 </html>
 
